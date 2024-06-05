@@ -55,4 +55,6 @@ Basic project goals
  - [ ] Attempt at classifying air or water flow direction with TF Lite Py computer vision?
  - [ ] Attempt at compiling text of classification(s) to inject into LLM for fault detection purposes with TF Lite Py computer vision
  - [ ] Attempt TF Lite Micro on embedded device like a [TensorFlow Lite for Microcontrollers Kit](https://www.adafruit.com/product/4317) with a quantized model
- 
+
+## Classification Visualization Goals
+ ![Alt text](/image.JPG)
