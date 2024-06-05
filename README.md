@@ -3,7 +3,6 @@ HVACGraphicsClassifier is an experimental tinyML project aimed at classifying HV
 
 
 ```bash
-
 HVACGraphicsClassifier/
 │
 ├── data/
@@ -45,3 +44,15 @@ HVACGraphicsClassifier/
 ├── requirements.txt
 └── README.md
 ```
+
+## Project goals
+Basic project goals
+ - [ ] Compile BAS screenshots across many manufactures of typical HVAC system graphics
+ - [ ] Perform image annotations with the labelImg tool to create ML dataset
+ - [ ] Attempt at classifying whole screenshot HVAC system types with TF Lite Py computer vision
+ - [ ] Attempt at classifying components inside the screenshots for ducts, pipes, sensor, valves, damper, fans, etc. with TF Lite Py computer vision
+ - [ ] Attempt at classifying text on graphics which would represent I/O and setpoints with TF Lite Py computer vision
+ - [ ] Attempt at classifying air or water flow direction with TF Lite Py computer vision?
+ - [ ] Attempt at compiling text of classification(s) to inject into LLM for fault detection purposes with TF Lite Py computer vision
+ - [ ] Attempt TF Lite Micro on embedded device like a [TensorFlow Lite for Microcontrollers Kit](https://www.adafruit.com/product/4317) with a quantized model
+ 
