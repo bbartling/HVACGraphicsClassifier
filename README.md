@@ -1,45 +1,47 @@
 # HVACGraphicsClassifier
 HVACGraphicsClassifier is an experimental tinyML project aimed at classifying HVAC control system graphics using computer vision. A project goal from the start is support of Tiny ML Micro, allowing models to be quantized to run on microcontrollers with the TensorFlow C library.
 
+* See `notebooks` directory README for some first initial efforts on trying to make this work.
 
 ```bash
 HVACGraphicsClassifier/
 │
 ├── data/
-│   ├── annotations/
-│   │   ├── train/
-│   │   ├── val/
-│   │   └── test/
 │   ├── images/
-│   │   ├── train/
-│   │   ├── val/
-│   │   └── test/
+│   │   ├── ahu/
+│   │   │   ├── image1.jpg
+│   │   │   ├── image2.jpg
+│   │   │   └── ...
+│   │   ├── vav_box/
+│   │   │   ├── image1.jpg
+│   │   │   ├── image2.jpg
+│   │   │   └── ...
+│   │   ├── boiler_plant/
+│   │   ├── cooling_plant/
+│   │   ├── fan_coil/
+│   │   └── heat_pump/
 │   └── labels.txt
 │
-├── models/
+├── models/ (TODO - FUTURE)
 │   ├── hvac_classifier.h5
 │   ├── hvac_classifier.tflite
 │   └── hvac_classifier_quant.tflite
 │
 ├── scripts/
-│   ├── preprocess.py
+│   ├── extract_text.py
+│   ├── generate_labels.py
 │   └── train.py
-│   └── convert_to_tflite.py
 │
-├── embedded/
+├── embedded/ (TODO - FUTURE)
 │   ├── include/
 │   │   ├── model.h
-│   │   ├── input_preprocessing.h
-│   │   ├── output_postprocessing.h
 │   └── src/
 │       ├── main.c
-│       ├── model.c
-│       ├── input_preprocessing.c
-│       ├── output_postprocessing.c
 │   └── Makefile
 │
 ├── notebooks/
-│   └── explore_data.ipynb
+│   ├── text_only_analysis.ipynb
+│   └── ahu_region_analysis.ipynb
 │
 ├── requirements.txt
 └── README.md

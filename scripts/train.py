@@ -20,16 +20,18 @@ def create_model(input_shape, num_classes):
 def train_model(data_dir, model_save_path, input_shape, batch_size=32, epochs=10):
     datagen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
     train_generator = datagen.flow_from_directory(
-        os.path.join(data_dir, 'images', 'train'),
+        data_dir,
         target_size=input_shape[:2],
         batch_size=batch_size,
-        class_mode='sparse'
+        class_mode='sparse',
+        subset='training'
     )
     val_generator = datagen.flow_from_directory(
-        os.path.join(data_dir, 'images', 'val'),
+        data_dir,
         target_size=input_shape[:2],
         batch_size=batch_size,
-        class_mode='sparse'
+        class_mode='sparse',
+        subset='validation'
     )
 
     model = create_model(input_shape, num_classes=len(train_generator.class_indices))
@@ -38,7 +40,7 @@ def train_model(data_dir, model_save_path, input_shape, batch_size=32, epochs=10
 
 if __name__ == "__main__":
     train_model(
-        data_dir='data',
+        data_dir='data/images',
         model_save_path='models/hvac_classifier.h5',
         input_shape=(128, 128, 3),
         batch_size=32,
