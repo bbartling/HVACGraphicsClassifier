@@ -4,5 +4,5 @@ Tested on Windows inside VS code notebooks. Download latest version of `tesserac
 
 Install Py 
 ```bash
-pip install pytesseract opencv-python matplotlib
+
 ```
